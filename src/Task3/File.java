@@ -1,16 +1,23 @@
 package Task3;
 
+/**
+ * Класс File представляет собой модель файла с атрибутами имени, типа и размера.
+ */
 public class File {
     String name;
     String type;
     Integer size;
 
+    /**
+     * Конструктор для инициализации атрибутов файла.
+     */
     public File(String name, String type, Integer size) {
         this.name = name;
         this.type = type;
         this.size = size;
     }
 
+    // Геттеры и сеттеры для атрибутов
     public String getName() {
         return name;
     }
