@@ -1,3 +1,5 @@
+package Task2;
+
 import java.util.Scanner;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
