@@ -49,28 +49,28 @@ public class Task2 {
     }
 
     public static void main(String[] args) throws IOException {
-        File source = new File("test.mp4"); // Исходный файл
-        File dest = new File("dst/test.mp4"); // Целевой файл
+        File source = new File("test_copy.pdf"); // Исходный файл
+        File dest = new File("dst/test_copy.pdf"); // Целевой файл
 
         // Тестирование различных методов копирования и измерение времени выполнения
         long start = System.nanoTime();
         copyFileUsingJavaFiles(source, dest);
         System.out.println("Время копирования файла с помощью класса Files Java = " + ((System.nanoTime() - start) / 1000000) + "мс");
 
-        source = new File("test.mp4");
-        dest = new File("dst/test.mp4");
+        source = new File("test_copy.pdf");
+        dest = new File("dst/test_copy.pdf");
         start = System.nanoTime();
         copyFileUsingStream(source, dest);
         System.out.println("Время копирования файла с помощью потоков = " + ((System.nanoTime() - start) / 1000000) + "мс");
 
-        source = new File("test.mp4");
-        dest = new File("dst/test.mp4");
+        source = new File("test_copy.pdf");
+        dest = new File("dst/test_copy.pdf");
         start = System.nanoTime();
         copyFileUsingChannel(source, dest);
         System.out.println("Время копирования файла с помощью java.nio.FileChannel = " + ((System.nanoTime() - start) / 1000000) + "мс");
 
-        source = new File("test.mp4");
-        dest = new File("dst/test.mp4");
+        source = new File("test_copy.pdf");
+        dest = new File("dst/test_copy.pdf");
         start = System.nanoTime();
         copyFileUsingApacheCommonsIO(source, dest);
         System.out.println("Время копирования файла с помощью Apache Commons IO Copy = " + ((System.nanoTime() - start) / 1000000) + "мс");
